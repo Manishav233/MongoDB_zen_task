@@ -1,0 +1,256 @@
+=> Design database for Zen class programme
+users
+codekata
+attendance
+topics
+tasks
+company_drives
+mentors
+
+==========================================================================
+
+=> Creating database:-  use mongo_zentask
+
+==========================================================================
+
+=> Creating Collection and inserting data to users  : -  db.createCollection("users");
+
+=> db.users.insertMany([
+    {
+        userid:1,
+        name:"Anu",
+        email:"anu@gmail.com",
+        
+    },
+     {
+        userid:2,
+        name:"Bhanu",
+        email:"bhanu@gmail.com",
+     
+    },
+     {
+        userid:3,
+        name:"Chethan",
+        email:"chethan@gmail.com",
+     
+    },
+     {
+        userid:4,
+        name:"Divya",
+        email:"divya@gmail.com",
+       
+    },
+     {
+        userid:5,
+        name:"Eshwar",
+        email:"eshwar@gmail.com",
+        
+    }  
+    ]);
+
+==========================================================================
+
+=> Creating Collection and inserting data to codekata  : -  db.createCollection("codekata");
+
+=> db.codekata.insertMany([
+    {
+        userid:1,
+        problems:70
+    },
+     {
+        userid:2,
+        problems:80
+    },
+     {
+        userid:3,
+        problems:90
+    },
+     {
+        userid:4,
+        problems:100
+    },
+     {
+        userid:5,
+        problems:110
+    }
+    ]);
+
+==========================================================================
+
+=> Creating Collection and inserting data to attendance : -  db.createCollection("attendance");
+
+=>  db.attendance.insertMany([
+    {
+        userid:1,
+        topicid:2,
+        attended:true
+    },
+     {
+        userid:2,
+        topicid:1,
+        attended:true
+    },
+     {
+        userid:3,
+        topicid:5,
+        attended:false
+    },
+    {
+        userid:4,
+        topicid:3,
+        attended:true
+    },
+    {
+        userid:5,
+        topicid:4,
+        attended:false
+    }
+    ])
+
+========================================================================
+
+=> Creating Collection and inserting data to topics : - db.createCollection("topics");
+
+=> db.topics.insertMany([
+    {   
+        topicid:1,
+        topic:"Javascript",
+        topic_date:new Date("2020-10-15")
+    },
+     {
+        topicid:2,
+        topic:"Redux",
+        topic_date:new Date("2020-10-17")
+    },
+     {
+        topicid:3,
+        topic:"AWS",
+        topic_date:new Date("2020-10-01")
+    },
+     {
+        topicid:4,
+        topic:"Data Structures",
+        topic_date:new Date("2020-10-02")
+    },
+     {
+         topicid:5,
+        topic:"React JS",
+        topic_date:new Date("2020-10-30")
+    }
+    ])
+
+============================================================================
+
+=> Creating Collection and inserting data to tasks : - db.createCollection("tasks");
+
+=> db.tasks.insertMany([
+    {
+        taskid:1,
+        topicid:1,
+        userid:1,
+        task:"Javascript task",
+        due_date:new Date("2020-10-15"),
+        submitted:true
+    },
+    {
+        taskid:2,
+        topicid:2,
+        userid:2,
+        task:"Redux task",
+        due_date:new Date("2020-10-17"),
+        submitted:true
+    },
+     {
+        taskid:3,
+        topicid:3,
+        userid:3,
+        task:"AWS task",
+        due_date:new Date("2020-10-01"),
+        submitted:false
+    },
+      {
+        taskid:4,
+        topicid:4,
+        userid:4,
+        task:"Data Structures task",
+        due_date:new Date("2020-10-02"),
+        submitted:true
+    },
+     {
+        taskid:5,
+        topicid:5,
+        userid:5,
+        task:"React JS task",
+        due_date:new Date("2020-10-30"),
+        submitted:false
+    }
+    ])
+
+=============================================================================
+
+=> Creating Collection and inserting data to company drives : - db.createCollection("company drives");
+
+=>  db.companydrives.insertMany([
+    {
+        userid:1,
+        drive_date:new Date("2020-10-15"),
+        company:"Accenture"
+    },
+     {
+        userid:1,
+        drive_date:new Date("2020-10-18"),
+        company:"HP"
+    },
+     {
+        userid:2,
+        drive_date:new Date("2020-10-02"),
+        company:"Amazon"
+    },
+     {
+        userid:3,
+        drive_date:new Date("2020-10-28"),
+        company:"Bosch"
+    },
+     {
+        userid:4,
+        drive_date:new Date("2020-11-02"),
+        company:"TCS"
+    }
+    ])
+
+=============================================================================
+
+=> Creating Collection and inserting data to mentors : - db.createCollection("mentors");
+
+ => db.mentors.insertMany([
+    {
+        mentorid:1,
+        mentorname:"Bhavya",
+        mentor_email:"bhavya@gmail.com",
+        mentee_count: 20
+    },
+      {
+        mentorid:2,
+        mentorname:"Chithra",
+        mentor_email:"chithra@gmail.com",
+        mentee_count:15
+    },
+      {
+        mentorid:3,
+        mentorname:"harsha",
+        mentor_email:"harsha@gmail.com",
+        mentee_count:7
+    },
+      {
+        mentorid:4,
+        mentorname:"Geetha",
+        mentor_email:"geetha@gmail.com",
+        mentee_count:30
+    },
+      {
+        mentorid:5,
+        mentorname:"Vicky",
+        mentor_email:"vicky@gmail.com",
+        mentee_count:25
+    }
+    ])
